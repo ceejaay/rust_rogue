@@ -33,8 +33,10 @@ impl Object {
 }
 
     fn handle_keys(tcod: &mut Tcod, player: &mut Object) -> bool {
+        // you can import just into a function, cool
         use tcod::input::Key;
         use tcod::input::KeyCode::*;
+
         let key = tcod.root.wait_for_keypress(true);
         match key {
             Key {
@@ -46,6 +48,8 @@ impl Object {
                 tcod.root.set_fullscreen(!fullscreen);
             }
             Key {code: Escape, ..} => return true,
+            //
+            // movement keys
             Key { code: Down, .. } => player.move_by(0, -1),
             Key { code: Up, .. } => player.move_by(0, 1),
             Key { code: Left, .. } => player.move_by(-1, 0),
@@ -77,13 +81,19 @@ fn main() {
 
     let npc = Object::new(SCREEN_WIDTH / 2 - 5, SCREEN_HEIGHT / 2, '@', YELLOW);
 
+    // here's where all the objects will go into the array
     let mut objects = [player, npc];
 
+    // Main game loop.
     while !tcod.root.window_closed() {
         tcod.con.clear();
+
+        // loop through the objects array
         for object in &objects {
+            // draw all the objects
             object.draw(&mut tcod.con)
         }
+        // not sure what blit is?
         blit(
             &tcod.con,
             (0, 0),
@@ -93,9 +103,10 @@ fn main() {
             1.0,
             1.0,
             );
+        //
         // tcod.con.put_char(player_x, player_y, '@', BackgroundFlag::None);
         tcod.root.flush();
-        tcod.root.wait_for_keypress(true);
+        // tcod.root.wait_for_keypress(true);
         let player = &mut objects[0];
         let exit = handle_keys(&mut tcod, player);
         if exit {
