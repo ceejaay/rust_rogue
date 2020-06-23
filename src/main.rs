@@ -4,11 +4,54 @@ use tcod::console::*;
 const SCREEN_WIDTH: i32 = 80;
 const SCREEN_HEIGHT: i32 = 50;
 const LIMIT_FPS: i32 = 20;
+
+const MAP_WIDTH: i32  = 80;
+const MAP_HEIGHT: i32  = 45;
+
+const COLOR_DARK_WALL: Color = Color {r: 0, g: 0, b: 100};
+const COLOR_DARK_GROUND: Color = Color {
+    r: 50,
+    g: 50,
+    b: 150,
+};
+
+
+// size of map:
 struct Tcod {
     root: Root,
     con: Offscreen,
 }
 
+type Map = Vec<Vec<Tile>>;
+
+struct Game {
+    map: Map,
+}
+
+#[derive(Clone, Copy, Debug)]
+
+struct Tile {
+    blocked: bool,
+    block_sight: bool,
+
+}
+
+impl Tile {
+    pub fn empty() -> Self {
+        Tile {
+            blocked: false,
+            block_sight: false,
+        }
+    }
+
+    pub fn wall() -> Self {
+        Tile {
+            blocked: true,
+            blocked_sight: true,
+        }
+    }
+}
+#[derive(Debug)]
 struct Object {
     x: i32,
     y: i32,
@@ -59,6 +102,15 @@ impl Object {
         }
         false
     }
+
+
+
+fn make_map() -> Map {
+    let mut map = vec![vec![Tile::empty(); MAP_HEIGHT as usize] MAP_WIDTH as usize];
+    map
+}
+
+
 fn main() {
     tcod::system::set_fps(LIMIT_FPS);
 

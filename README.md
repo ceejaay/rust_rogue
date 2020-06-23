@@ -25,3 +25,9 @@ Questions:
     barfoo } =>
     { foobar }`
 
+
+
+What is `vec`?
+this is from the tutorial.
+
+>The vec! macro is a shortcut that creates a Vec and fills it with values. For example, vec!['a'; 42] would create a Vec containing the letter 'a' 42 times. We do the same trick above to build a column of tiles and then build the map of those columns.
