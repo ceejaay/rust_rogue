@@ -3,25 +3,25 @@ Getting familiar with Rust by following a roguelike tutorial.
 Questions:
     What is a stuct?
     
-    Is struct like an object?
+ Is struct like an object?
     
-    Do you have to create the struct then create the code to create the struct in the actual code?
+Do you have to create the struct then create the code to create the struct in the actual code?
     
-    Does `mut` mean mutable?
+Does `mut` mean mutable?
     
-    What is `blit` Is it tcod or Rust?
+What is `blit` Is it tcod or Rust?
     
-    What is `impl`?
+What is `impl`?
     
-    What's going on with the `&`? Is that a pointer?
+ What's going on with the `&`? Is that a pointer?
     
-    What is `pub fn` Public function?
+What is `pub fn` Public function?
     
-    Have no idea what's going on here
+Have no idea what's going on here
 
 
 
-    ```match key {
+    match key {
         Key {
             code: Enter,
             alt: true,
@@ -30,7 +30,7 @@ Questions:
             // Alt+Enter: toggle fullscreen
             let fullscreen = tcod.root.is_fullscreen();
             tcod.root.set_fullscreen(!fullscreen);
-        }```
+        }
 
 
 
