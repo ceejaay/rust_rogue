@@ -10,6 +10,9 @@ Questions:
     What's going on with the `&`? Is that a pointer?
     What is `pub fn` Public function?
     Have no idea what's going on here
+
+
+
     ```match key {
         Key {
             code: Enter,
@@ -21,7 +24,12 @@ Questions:
             tcod.root.set_fullscreen(!fullscreen);
         }```
 
-    I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's going oin with the` match foo {
+
+
+
+    I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's going oin with the 
+
+   '' match foo {
     barfoo } =>
     { foobar }`
 
