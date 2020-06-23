@@ -27,7 +27,8 @@ Questions:
 
 
 
-    I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's going oin with the 
+
+I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's going oin with the 
 
    '' match foo {
     barfoo } =>
