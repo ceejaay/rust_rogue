@@ -67,7 +67,7 @@ I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's 
 
    ``` match foo {
     barfoo } =>
-    { foobar }
+    { foobar }```
 
 
 
