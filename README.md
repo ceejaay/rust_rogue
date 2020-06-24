@@ -45,6 +45,7 @@ I think this is a tcod thing, not so much a Rust thing. But I'm not sure what's 
 
 
 What is `vec`?
+
 this is from the tutorial.
 
 >The vec! macro is a shortcut that creates a Vec and fills it with values. For example, vec!['a'; 42] would create a Vec containing the letter 'a' 42 times. We do the same trick above to build a column of tiles and then build the map of those columns.
@@ -66,3 +67,15 @@ I think this is how you create an object.
 1. you have to describe what the object is. What are it's properties.
 2. Then you have to write the function that creates the object.
 3. Any functions the object needs need to be written.
+
+
+I forgot what a closure is?
+
+
+What is derive? How does it work on `struct`?
+
+What does the `*` mean?
+
+How does `match` work?
+
+
