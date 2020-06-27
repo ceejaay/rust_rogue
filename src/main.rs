@@ -273,8 +273,8 @@ fn handle_keys(tcod: &mut Tcod, game: &Game, player: &mut Object) -> bool {
         Key {code: Escape, ..} => return true,
         //
         // movement keys
-        Key { code: Down, .. } => player.move_by(0, -1, game),
-        Key { code: Up, .. } => player.move_by(0, 1, game),
+        Key { code: Down, .. } => player.move_by(0, 1, game),
+        Key { code: Up, .. } => player.move_by(0, -1, game),
         Key { code: Left, .. } => player.move_by(-1, 0, game),
         Key { code: Right, .. } => player.move_by(1, 0, game),
 
@@ -307,9 +307,9 @@ fn main() {
 
     let player = Object::new(0, 0, '@', WHITE);
 
-    let npc = Object::new(SCREEN_WIDTH / 2 - 5, SCREEN_HEIGHT / 2, '@', YELLOW);
+    // let npc = Object::new(SCREEN_WIDTH / 2 - 5, SCREEN_HEIGHT / 2, '@', YELLOW);
 
-    let mut objects = [player, npc];
+    let mut objects = [player];
 
     let mut game = Game {
         map: make_map(&mut objects[0]),

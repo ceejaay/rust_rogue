@@ -2,19 +2,23 @@ Getting familiar with Rust by following a roguelike tutorial.
 
 Questions:
     What is a stuct?
-    
+
  Is struct like an object?
-    
+
 Do you have to create the struct then create the code to create the struct in the actual code?
-    
-Does `mut` mean mutable?
-    
+
+Does `mut` mean mutable? A: `mut` is mutable. Variables in Rust are immutable by default. So to have a variable change you
+have to make it mutable with `mut`
+
 What is `blit` Is it tcod or Rust?
-    
+
 What is `impl`?
-    
- What's going on with the `&`? Is that a pointer?
-    
+
+ What's going on with the `&`? Is that a pointer? A: Yes, this is a pointer or a reference. It references the thing in
+ memory so you don't have to copy it.
+
+
+
 What is `pub fn` Public function?
 
 What is `usize`??
@@ -73,5 +77,7 @@ What is `vec`?
 this is from the tutorial.
 
 >The vec! macro is a shortcut that creates a Vec and fills it with values. For example, vec!['a'; 42] would create a Vec containing the letter 'a' 42 times. We do the same trick above to build a column of tiles and then build the map of those columns.
+
+
 
 
